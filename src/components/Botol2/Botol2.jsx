@@ -2,6 +2,7 @@
 import './Botol2.css'
 const Botol2 = ({bottole,handleBottolePrice}) => {
     const{name,img,price}=bottole
+    // console.log(bottole)
     return (
         <div className="bottole">
             <h2>Bottole :{name}</h2>

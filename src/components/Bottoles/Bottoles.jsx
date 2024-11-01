@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Botol2 from "../Botol2/Botol2";
 import './Bottoles.css'
+import { addLocal } from "../../utilitis/localstroge";
+
 
 
 const Bottoles = () => {
@@ -18,6 +20,7 @@ const Bottoles = () => {
     const handleBottolePrice=bottole=>{
         const newCart=[...cart,bottole]
         setCart(newCart)
+        addLocal(bottole.id)
 
     }
     return (
@@ -30,6 +33,7 @@ const Bottoles = () => {
                     key={bottole.id} 
                     handleBottolePrice={handleBottolePrice}
                     bottole={bottole}></Botol2>)
+                    
             }
             </div>
         </div>
